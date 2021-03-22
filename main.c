@@ -34,6 +34,15 @@ float rntTax(float balance)
 	return bTax;
 }
 
+// Personal banking information (holder for strings)
+void bInfo(char fName[20], char lName[20], char eMail[30], char pNum[20])
+{
+	printf("| First Name: %s \n", fName);
+	printf("| Last Name: %s \n", lName);
+	printf("| Email: %s \n", eMail);
+	printf("| Phone Number: %s \n", pNum);
+}
+
 // Bank account information output
 void bankOutput()
 {
@@ -44,17 +53,16 @@ void bankOutput()
 	balance = bankBalance(67000);
 	rent = bankRent(balance);
 	tax = rntTax(balance);
-
+	
+	bInfo("Alex", "Scheinder", "AlX.Scheinder@netX.org", "+76 45452");
+	printf("\n");
 	printf("| Account Balance: %f \n", balance);
 	printf("| Rent: %f \n", rent);
 	printf("| Tax rent: %f \n", tax);
 }
 
-
-
 int main()
 {
-	bankOutput();	
-
+	bankOutPut();	
 	return 0;
 }
